@@ -33,4 +33,4 @@ if uploaded_file is not None:
     if response.status_code == 201:
         st.success(f"✅ 계획서 파일이 정상적으로 업로드되었습니다: {file_path}")
     else:
-        st.error(f"❌ 업로드 실패: {response.json()}")
+        st.error(f"❌ 업로드 실패(파일 이름 중복 여부 확인): {response.json()}")
