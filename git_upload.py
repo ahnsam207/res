@@ -31,6 +31,6 @@ if uploaded_file is not None:
     response = requests.put(url, json=data, headers={"Authorization": f"token {GITHUB_TOKEN}"})
 
     if response.status_code == 201:
-        st.success(f"✅ 계획서 파일이 정상적으로 업로드되었습니다.\n {uploaded_file.name}")
+        st.success(f"✅ 계획서 파일이 정상적으로 업로드되었습니다.\n\n {uploaded_file.name}")
     else:
         st.error("❌ 업로드 실패(파일의 이름을 수정해 주세요.)")
